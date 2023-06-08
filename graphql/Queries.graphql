@@ -1,0 +1,21 @@
+query GetAllCounties {
+  countries {
+    code
+    name
+    capital
+    emoji
+  }
+}
+
+query GetCountryByCode($code: ID!) {
+  country(code: $code) {
+    code
+    name
+    capital
+    emoji
+    states {
+      name
+      code
+    }
+  }
+}
